@@ -10,6 +10,7 @@ class Messages extends Component {
       </ul>
     );
   }
+  
   renderMessage(message) {
     const {member, text} = message;
     const {currentMember} = this.props;
