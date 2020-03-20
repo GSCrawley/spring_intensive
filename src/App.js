@@ -3,7 +3,7 @@ import './App.css';
 import Messages from "./Messages";
 import Input from "./Input"
 
-// ### Creating random avatar
+// ### Creating a random avatar
 
 function randomName() {
   const adjectives = ["autumn", "hidden", "bitter", "misty", "silent", "empty", "dry", "dark", "summer", "icy", "delicate", "quiet", "white", "cool", "spring", "winter", "patient", "twilight", "dawn", "crimson", "wispy", "weathered", "blue", "billowing", "broken", "cold", "damp", "falling", "frosty", "green", "long", "late", "lingering", "bold", "little", "morning", "muddy", "old", "red", "rough", "still", "small", "sparkling", "throbbing", "shy", "wandering", "withered", "wild", "black", "young", "holy", "solitary", "fragrant", "aged", "snowy", "proud", "floral", "restless", "divine", "polished", "ancient", "purple", "lively", "nameless"];
@@ -53,7 +53,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h1>My Chat App</h1>
+          <h1>Gideon's Chat App</h1>
         </div>
         <Messages
           messages={this.state.messages}
