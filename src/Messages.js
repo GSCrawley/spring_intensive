@@ -10,7 +10,7 @@ class Messages extends Component {
       </ul>
     );
   }
-  
+
   renderMessage(message) {
     const {member, text} = message;
     const {currentMember} = this.props;
@@ -19,10 +19,10 @@ class Messages extends Component {
       "Messages-message currentMember" : "Messages-message";
     return (
       <li className={className}>
-        <span
-          className="avatar"
-          style={{backgroundColor: member.clientData.color}}
-        />
+      <span
+        className="avatar"
+        style={{backgroundColor: member.clientData.color}}
+      />
         <div className="Message-content">
           <div className="username">
             {member.clientData.username}
