@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Messages from "./Messages";
 import Input from "./Input"
+
+// ### Creating random avatar
 
 function randomName() {
   const adjectives = ["autumn", "hidden", "bitter", "misty", "silent", "empty", "dry", "dark", "summer", "icy", "delicate", "quiet", "white", "cool", "spring", "winter", "patient", "twilight", "dawn", "crimson", "wispy", "weathered", "blue", "billowing", "broken", "cold", "damp", "falling", "frosty", "green", "long", "late", "lingering", "bold", "little", "morning", "muddy", "old", "red", "rough", "still", "small", "sparkling", "throbbing", "shy", "wandering", "withered", "wild", "black", "young", "holy", "solitary", "fragrant", "aged", "snowy", "proud", "floral", "restless", "divine", "polished", "ancient", "purple", "lively", "nameless"];
@@ -16,30 +18,39 @@ function randomColor() {
   return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
 }
 
+// create App Component
+
 class App extends Component {
   state = {
-    messages: [],
+    messages: [ {
+      text: "This is a test message!",
+      member: {
+        color: "blue",
+        username: "bluemoon"
+      }
+    }
+  ],
     member: {
       username: randomName(),
       color: randomColor(),
     }
   }
 
-
+// constructor goes here
 
   render() {
     return (
       <div className="App">
-        <div className="App-header">
+        {/* <div className="App-header">
           <h1>My Chat App</h1>
-        </div>
+        </div> */}
         <Messages
           messages={this.state.messages}
           currentMember={this.state.member}
         />
-        <Input
+        {/* <Input
           onSendMessage={this.onSendMessage}
-        />
+        /> */}
       </div>
     );
   }
@@ -49,8 +60,8 @@ class App extends Component {
     messages.push({
       text: message,
       member: this.state.member
-    })
+    });
     this.setState({messages: messages})
   }
-
-export default App;
+}
+  export default App;
