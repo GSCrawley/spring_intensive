@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Messages from "./Messages";
 import Input from "./Input"
@@ -41,16 +40,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <div className="App-header">
+        <div className="App-header">
           <h1>My Chat App</h1>
-        </div> */}
+        </div>
         <Messages
           messages={this.state.messages}
           currentMember={this.state.member}
         />
-        {/* <Input
+        <Input
           onSendMessage={this.onSendMessage}
-        /> */}
+        />
       </div>
     );
   }

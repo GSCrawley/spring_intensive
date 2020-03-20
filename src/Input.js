@@ -5,14 +5,17 @@ class Input extends Component {
   state = {
     text: ""
   }
+
+  onChange(e) {
+    this.setState({text: e.target.value});
+  }
+
   onSubmit(e) {
     e.preventDefault();
     this.setState({text: ""});
     this.props.onSendMessage(this.state.text);
   }
-  onChange(e) {
-    this.setState({text: e.target.value});
-  }
+
   render() {
     return (
       <div className="Input">
