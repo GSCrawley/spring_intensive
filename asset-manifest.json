@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/spring_intensive/static/css/main.da67cd58.chunk.css",
+    "main.js": "/spring_intensive/static/js/main.40ecb074.chunk.js",
+    "main.js.map": "/spring_intensive/static/js/main.40ecb074.chunk.js.map",
+    "runtime-main.js": "/spring_intensive/static/js/runtime-main.69d827fe.js",
+    "runtime-main.js.map": "/spring_intensive/static/js/runtime-main.69d827fe.js.map",
+    "static/js/2.3ece9f00.chunk.js": "/spring_intensive/static/js/2.3ece9f00.chunk.js",
+    "static/js/2.3ece9f00.chunk.js.map": "/spring_intensive/static/js/2.3ece9f00.chunk.js.map",
+    "index.html": "/spring_intensive/index.html",
+    "precache-manifest.9fa339018450d6edec3d3497083e3a36.js": "/spring_intensive/precache-manifest.9fa339018450d6edec3d3497083e3a36.js",
+    "service-worker.js": "/spring_intensive/service-worker.js",
+    "static/css/main.da67cd58.chunk.css.map": "/spring_intensive/static/css/main.da67cd58.chunk.css.map",
+    "static/js/2.3ece9f00.chunk.js.LICENSE.txt": "/spring_intensive/static/js/2.3ece9f00.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.69d827fe.js",
+    "static/js/2.3ece9f00.chunk.js",
+    "static/css/main.da67cd58.chunk.css",
+    "static/js/main.40ecb074.chunk.js"
+  ]
+}
