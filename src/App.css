@@ -21,6 +21,7 @@
   list-style: none;
   padding-left: 0;
   flex-grow: 1;
+  flex-direction: column-reverse;
   overflow: auto;
 }
 

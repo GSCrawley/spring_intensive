@@ -1,3 +1,5 @@
+Tuesday morning during office hours, figure out why auto-scroll not working
+
 gids_spring_intensive
 Juniors Spring Intensive Deliverable Proposal
 
