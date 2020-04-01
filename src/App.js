@@ -54,7 +54,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h1>Gideon's Chat App</h1>
+          <h1>Welcome to Incog</h1>
         </div>
         <Messages
           messages={this.state.messages}
