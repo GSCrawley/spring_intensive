@@ -1,4 +1,6 @@
 
+## adding user auth with Firebase
+
 ## gids_spring_intensive
 
 ## Juniors Spring Intensive Deliverable Proposal
