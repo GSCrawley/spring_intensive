@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Messages from "./Messages";
 import Input from "./Input";
+import Auth from "./Auth";
 
 // ### Creating a random avatar
 
@@ -52,6 +53,8 @@ class App extends Component {
 
   render() {
     return (
+      <>
+      <div className="Auth"><Auth /></div>
       <div className="App">
         <div className="App-header">
           <h1>Welcome to Incog</h1>
@@ -64,6 +67,7 @@ class App extends Component {
           onSendMessage={this.onSendMessage}
         />
       </div>
+      </>
     );
   }
 
