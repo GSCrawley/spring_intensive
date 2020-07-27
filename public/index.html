@@ -41,5 +41,28 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBt68W2a68uzvDkoHbLRYIqwrOVAtLW3k8",
+    authDomain: "gids-chat-app-auth.firebaseapp.com",
+    databaseURL: "https://gids-chat-app-auth.firebaseio.com",
+    projectId: "gids-chat-app-auth",
+    storageBucket: "gids-chat-app-auth.appspot.com",
+    messagingSenderId: "9965876555",
+    appId: "1:9965876555:web:bae664bdc9d64358b1e4ce",
+    measurementId: "G-77YSP35QGS"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
   </body>
 </html>
