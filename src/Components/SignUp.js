@@ -1,18 +1,32 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "@reach/router";
+import { auth, signInWithGoogle, generateUserDocument } from "../firebase";
+
+
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [displayName, setDisplayName] = useState("");
   const [error, setError] = useState(null);
-  const createUserWithEmailAndPasswordHandler = (event, email, password) => {
+
+  const createUserWithEmailAndPasswordHandler = async (event, email, password) => {
     event.preventDefault();
+    try{
+      const {user} = await auth.createUserWithEmailAndPassword(email, password);
+      generateUserDocument(user, {displayName});
+    }
+    catch(error){
+      setError('Error Signing up with email and password');
+    }
+      
     setEmail("");
     setPassword("");
     setDisplayName("");
   };
+
   const onChangeHandler = event => {
     const { name, value } = event.currentTarget;
+
     if (name === "userEmail") {
       setEmail(value);
     } else if (name === "userPassword") {
@@ -21,6 +35,7 @@ const SignUp = () => {
       setDisplayName(value);
     }
   };
+
   return (
     <div className="mt-8">
       <h1 className="text-3xl mb-2 text-center font-bold">Sign Up</h1>
@@ -78,6 +93,13 @@ const SignUp = () => {
         </form>
         <p className="text-center my-3">or</p>
         <button
+          onClick={() => {
+            try {
+              signInWithGoogle();
+            } catch (error) {
+              console.error("Error signing in with Google", error);
+            }
+          }}
           className="bg-red-500 hover:bg-red-600 w-full py-2 text-white"
         >
           Sign In with Google
@@ -86,10 +108,11 @@ const SignUp = () => {
           Already have an account?{" "}
           <Link to="/" className="text-blue-500 hover:text-blue-600">
             Sign in here
-          </Link>
+          </Link>{" "}
         </p>
       </div>
     </div>
   );
 };
+
 export default SignUp;

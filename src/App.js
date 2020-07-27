@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, useContext } from 'react';
 import './App.css';
 import Messages from "./Messages";
 import Input from "./Input";
-import Auth from "./Auth";
+import Application from "./Components/Application";
+import UserProvider from "./providers/UserProvider";
+
 
 // ### Creating a random avatar
 
@@ -54,7 +56,12 @@ class App extends Component {
   render() {
     return (
       <>
-      <div className="Auth"><Auth /></div>
+      <div className="User">
+        <div className="Signin">
+      <UserProvider>
+        <Application />
+      
+      
       <div className="App">
         <div className="App-header">
           <h1>Welcome to Incog</h1>
@@ -67,7 +74,11 @@ class App extends Component {
           onSendMessage={this.onSendMessage}
         />
       </div>
-      </>
+      
+      </UserProvider>
+      </div>
+</div>
+</>
     );
   }
 
